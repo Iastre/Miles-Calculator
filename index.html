@@ -2,14 +2,41 @@
 <head>
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <div class="main">
-    <div class="inputs"><div class="left">first number<br /><input type="text"></div><div class="right">second number<br /><input type="text"></div></div><br />
-    <div class="radios"><input type="radio">add<input type="radio">subtract<input type="radio">multiply<input type="radio">subtract</div><br />
-    <div class="buttons"><button class="">=</button><button>Clear</button></div><br />
-    <p id="result"></p>
+        <div class="inputs">
+            <div class="left">
+                first number
+                <br />
+                <input id="firstNum" type="number" autofocus="on">
+            </div>
+            <div class="right">
+                second number
+                <br />
+                <input id="secondNum" type="number">
+            </div>
+        </div>
+        <br />
+        <div class="radios">
+            <input type="radio" name="operator" id="add" checked>
+            <label for="add">add</label>
+            <input type="radio" name="operator" id="subtract">
+            <label for="subtract">subtract</label>
+            <input type="radio" name="operator" id="multiply">
+            <label for="multiply">multiply</label>
+            <input type="radio" name="operator" id="divide">
+            <label for="divide">divide</label>
+        </div>
+        <br />
+        <div class="buttons">
+            <button class="standout" onclick="calculate()">=</button>
+            <button onclick="clearDisplay()">Clear</button>
+        </div>
+        <br />
+        <p id="result">Please enter an equation.</p>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
